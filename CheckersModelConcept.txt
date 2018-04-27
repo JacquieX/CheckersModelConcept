@@ -1,0 +1,54 @@
+1.Requirements:
+Our ultimate goal is to develop a Checkers (Draughts) game. The app will allow both human
+and computer players in any combination: human-human, computer-human, computercomputer.
+The app is to do the following:
+? Collect and display the player names.
+? Determine who moves first and gets assigned the black (dark) pieces.
+? Display a board with pieces the user can interact with if one or both players are human.
+? Prevent illegal moves.
+? Identify when there is a winner, loser, or if a draw has occurred.
+The goal of this challenge is to create a concept for a data model for the Checkers (Draughts)
+game.
+The data model is a representation of the Checkers game as data and methods without any
+reference to UI elements.
+In coming up with the data model you need to consider the best data representation for the
+state of the game (the pieces on the board) so that it is easy to:
+? determine what moves are possible/allowable.
+? determine if a move is illegal.
+? determine a winner, loser, or a draw condition.
+? implement the algorithms (outside of the model) for the computer (AI) to determine
+moves.
+? implement a UI representation of the game and game play.
+The data model is to include not only the data to represent the pieces on the board but all of
+the data needed for playing the game.
+The data model is to include methods for changing/managing the state of the model. These
+methods are to be used to change and determine the state of the game.
+
+2.Data representation:
+class Checkers {
+	Color colorPiece; // Fields
+	boolean isKing;
+	Checkers(Color){}; // constructor
+	boolean getIsKing; // will be used when determining valid moves
+	Color getColor; // gets color of piece
+}
+class Player{
+	String name;
+	Color gameColor; the color of pieces, will be used when determining play order
+	Player(Color){}; //constructors, sets color
+        String getName(); 
+	Color getColor();
+}
+class CheckerGame{
+}
+
+
+3.Methods
+buildBoard();
+moveChecker(){
+validMove();
+}
+deleteChecker(); 
+lightWinner();
+darkWinner();
+Even(); 
